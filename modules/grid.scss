@@ -17,3 +17,19 @@
         height: 100%;
      }
 }
+
+/*ie7 workarounds*/
+/*make into separate file to load on ie7*/
+@for $i from 1 through 100 {
+    .wid-#{$i} {
+        *display: inline; /* this entire section will only be read by ie7 and is a workaround for inline-block*/
+        *zoom: 1;
+        *box-sizing: border-box;
+     }
+}
+
+/* contains wid-x elements  */
+.row {
+    width: 100%;
+    clear: both;
+}

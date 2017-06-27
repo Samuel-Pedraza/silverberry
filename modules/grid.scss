@@ -1,71 +1,19 @@
-/* mobile queries*/
+/* builds grid for desktop*/
+@media screen and (min-width: 800px) {
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9-, .col-10, .col-11, .col-12 {
-    width: 100%;
-    display: inline-block;
-    overflow: hidden;
-    vertical-align: top;
+    @for $i from 1 through 100 {
+        .wid-#{$i} {
+            width: percentage($i / 100);
+            height: 100%;
+         }
+    }
+
 }
 
-/* work around for ie7 */
-
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9-, .col-10, .col-11, .col-12 {
-    *display: inline;
-    *zoom: 1;
-    *box-sizing: border-box; /* check if this works?*/
-}
-
-
-/* desktop queries  */
-/* min-width: 850px */
-
-@media screen and (min-width: 800px){
-
-    .col-1 {
+/* builds mobile-grid*/
+@for $i from 1 through 100 {
+    .wid-#{$i} {
         width: 100%;
+        height: 100%;
      }
-
-    .col-2 {
-        width: 91%;
-    }
-
-    .col-3 {
-        width: 83%;
-    }
-
-    .col-4 {
-        width: 75%;
-    }
-
-    .col-5 {
-        width: 66%;
-    }
-
-    .col-6 {
-        width: 58%;
-    }
-
-    .col-7 {
-        width: 50%;
-    }
-
-    .col-8 {
-        width: 41%;
-    }
-
-    .col-9 {
-        width: 33%;
-    }
-
-    .col-10 {
-        width: 25%;
-    }
-
-    .col-11 {
-        width: 16%;
-    }
-
-    .col-12 {
-        width:  8%;
-    }
 }

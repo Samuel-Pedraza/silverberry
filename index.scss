@@ -1,0 +1,22 @@
+//imports all other scss and will output this scss as css
+
+//reset scss
+@import 'base/reset';
+
+//grid scss
+@import 'layout/grid';
+
+//grab component files
+//@import 'modules/component';
+
+//grab button, footer, forms, nav, side, table scss files from template folder
+@import 'modules/template/buttons';
+@import 'modules/template/footer';
+@import 'modules/template/forms';
+@import 'modules/template/nav';
+@import 'modules/template/sidebar';
+@import 'modules/template/table';
+
+//grab color and font files, from state folder
+@import 'state/colors';
+@import 'state/fonts';

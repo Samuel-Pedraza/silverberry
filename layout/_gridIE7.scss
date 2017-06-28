@@ -1,0 +1,19 @@
+/*ie7 workarounds*/
+/*make into separate file to load on ie7*/
+@for $i from 1 through 100 {
+    .wid-#{$i} {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        *box-sizing: border-box;
+        width: percentage($i / 100);
+        height: 100%;
+        margin-left: -4px;
+     }
+}
+
+/* contains wid-x elements  */
+.row {
+    width: 100%;
+    max-width: 1200px;
+}
